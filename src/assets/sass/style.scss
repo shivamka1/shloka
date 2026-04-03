@@ -451,18 +451,26 @@ img[src$="#full"] {
    ========================================================================== */
 
 #blog-header {
-	position: relative;
 	padding: 4em 0;
 	text-align: center;
+}
+.home-wrapper #blog-header {
+	padding-bottom: 1em;
 }
 .home-wrapper {
 	display: grid;
 	grid-template-columns: 300px 1fr 300px;
+	grid-template-rows: auto 1fr;
 	max-width: 1400px;
 	margin: 0 auto;
 }
+#blog-header {
+	grid-column: 2;
+	grid-row: 1;
+}
 .home-sidebar {
 	grid-column: 1;
+	grid-row: 1 / 3;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -473,6 +481,7 @@ img[src$="#full"] {
 }
 .home-main {
 	grid-column: 2;
+	grid-row: 2;
 	min-width: 0;
 }
 .author-avatar {
@@ -544,10 +553,53 @@ img[src$="#full"] {
 }
 @media only screen and (max-width: 960px) {
 	.home-wrapper {
-		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
+	}
+	#blog-header {
+		order: 1;
 	}
 	.home-sidebar {
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 1.5em 1.5em 0.5em;
+		position: static;
+		margin-bottom: 1.5em;
+	}
+	.home-main {
+		order: 3;
+	}
+	#blog-header {
+		padding: 1.5em 0;
+	}
+	#blog-header:after {
 		display: none;
+	}
+	.tags-container {
+		justify-content: flex-start;
+		padding-left: 1em;
+	}
+	.tags-wrapper {
+		flex-direction: column;
+	}
+	.author-avatar {
+		width: 100px !important;
+		height: 100px !important;
+		margin: 0 auto 0.8em !important;
+	}
+	.blog-header-social {
+		margin-top: 0.4em;
+		width: auto;
+		justify-content: center;
+	}
+	.sidebar-location {
+		margin-top: 0.2em;
+		padding-left: 0;
+		justify-content: center;
 	}
 }
 #blog-header:after {
@@ -564,13 +616,23 @@ img[src$="#full"] {
 	content: none;
 }
 .post-count {
-	position: absolute;
-	left: 50%;
-	bottom: 0.6em;
-	transform: translateX(-50%);
 	text-align: center;
 	font-family: monospace;
 	white-space: nowrap;
+	padding: 0.8em 0 1.2em;
+	margin-bottom: 0.4em;
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		height: 1px;
+		background: $color-gray-90;
+	}
 }
 .post-count-number {
 	display: inline-flex;
