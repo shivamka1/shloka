@@ -1,16 +1,12 @@
 {
   "name": "shloka",
-  "description": "A Ghost theme based on Attila by zutrinken",
+  "description": "Ghost theme for personal blog",
   "version": "1.0.0",
   "engines": {
     "ghost": ">=2.0.0",
     "ghost-api": "v2"
   },
   "license": "MIT",
-  "screenshots": {
-    "desktop": "src/screenshot-desktop.jpg",
-    "mobile": "src/screenshot-mobile.jpg"
-  },
   "author": {
     "name": "Shivam Kapoor",
     "email": "namaste@shivamkapoor.com",
