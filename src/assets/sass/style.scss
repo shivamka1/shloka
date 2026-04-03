@@ -59,6 +59,11 @@ a:hover,
 a:focus {
 	color: $color-black;
 }
+.post-go-back:hover,
+.post-go-back:active,
+.post-go-back:focus {
+	color: #666 !important;
+}
 .post-tags a:hover,
 .post-tags a:focus {
 	color: $color-white !important;
@@ -520,7 +525,7 @@ img[src$="#full"] {
 	width: 180px;
 	justify-content: flex-start;
 	padding-left: 0.55em;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'Armata', sans-serif;
 	i { font-size: 1.35em; }
 }
 
@@ -675,6 +680,10 @@ img[src$="#full"] {
 	font-size: 1.6em !important;
 	font-family: 'Poiret One', sans-serif;
 }
+.paged .blog-description {
+	font-size: 1.3em !important;
+	font-family: 'Poiret One', sans-serif;
+}
 .has-cover .blog-description {
 	color: $color-white;
 }
@@ -729,12 +738,12 @@ img[src$="#full"] {
 	height: 1.5em;
 	margin-bottom: 1em;
 	padding: 0.5em 1.25em;
-//	border: 1px solid $color-blue-80;
+//	border: 1px solid #d8d8d0;
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 1.6em;
 	line-height: 1.667em;
 	text-shadow: none;
-//	color: $color-blue-60;
+//	color: #4a6fa5;
 	cursor: pointer;
 	background: $color-white;
 	transition: color,border-color ease 0.3s;
@@ -743,7 +752,6 @@ img[src$="#full"] {
 .nav-button a:hover,
 .nav-button a:focus {
 	color: $primary-color;
-	border-color: $primary-color;
 }
 .cover-active .nav-button a {
 	color: $color-white;
@@ -794,7 +802,7 @@ img[src$="#full"] {
 	top: 0;
 	right: 0;
 	margin: 1em;
-	border: 1px solid $color-blue-80;
+	border: 1px solid #d8d8d0;
 	color: transparent;
 	cursor: pointer;
 	transition: all ease 0.3s;
@@ -805,7 +813,6 @@ img[src$="#full"] {
 #menu .close-button:hover,
 #menu .close-button:focus {
 	transform: rotate(180deg);
-	border-color: $primary-color;
 }
 #menu .close-button:after,
 #menu .close-button:before {
@@ -940,6 +947,7 @@ img[src$="#full"] {
 	padding-bottom: 6em;
 }
 .credits {
+	font-family: 'Armata', sans-serif;
 	text-align: center;
 	font-size: 0.625em;
 	line-height: 1em;
@@ -1108,13 +1116,14 @@ img[src$="#full"] {
 	padding: 0.05em 1em;
 	border: 1px solid $color-gray-90;
 	border-radius: 8px;
+	font-family: 'Fira Sans', sans-serif;
 	font-size: 0.75em;
-	color: $color-blue-15;
+	color: #999;
 	text-decoration: none;
 	background: $color-white;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 	transition: border-color 0.2s ease;
-	&:hover { border-color: $color-blue-80; }
+	&:hover, &:active { border-color: $color-blue-80; color: #666 !important; }
 }
 .post-home-icon {
 	width: 36px !important;
@@ -1148,8 +1157,8 @@ img[src$="#full"] {
 	position: relative;
 	z-index: 10;
 	display: block;
+	font-family: 'Armata', sans-serif;
 	margin-bottom: 1.334em;
-	font-family: 'Karla', sans-serif;
 	font-size: 0.7em;
 	font-weight: 400;
 	line-height: 1.334em;
@@ -1254,21 +1263,21 @@ img[src$="#full"] {
 	margin: 0 0.334em 0.667em 0;
 	padding: 0.575em 1em;
 	background: $color-white;
-	border: 1px solid #7096c8;
+	border: 1px solid #d8d8d0;
 	font-size: 0.75em;
 	font-weight: 500;
 	line-height: 1.334em;
 	text-align: center;
 	text-decoration: none;
-	color: #4a6fa5 !important;
+	color: #555 !important;
 	border-radius: 6px;
 	transition: all ease 0.3s;
 	box-sizing: border-box;
 }
 .post-tags a:hover,
 .post-tags a:focus {
-	background: #4a6fa5 !important;
-	border-color: #4a6fa5 !important;
+	background: #333 !important;
+	border-color: #333 !important;
 	color: $color-white !important;
 }
 
@@ -1402,11 +1411,11 @@ img[src$="#full"] {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1.25em;
-	border: 1px solid $color-blue-80;
+	border: 1px solid #d8d8d0;
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 0.75em;
 	line-height: 1.334em;
-	color: $color-blue-60;
+	color: #4a6fa5;
 	text-align: center;
 	cursor: pointer;
 	transition: all ease 0.3s;
@@ -1415,7 +1424,6 @@ img[src$="#full"] {
 .post-comments-activate:hover,
 .post-comments-activate:focus {
 	color: $primary-color;
-	border-color: $primary-color;
 }
 .activated .post-comments-activate {
 	display: none;
@@ -1447,7 +1455,7 @@ img[src$="#full"] {
 			font-size: 0.8em;
 			height: 2.5em;
 			padding: 0.25em 1em;
-			border: 1px solid $color-blue-80;
+			border: 1px solid #d8d8d0;
 			border-right: none;
 			appearance: none;
 			outline: none;
@@ -1585,16 +1593,16 @@ img[src$="#full"] {
 	display: block;
 	height: 1.334em;
 	margin: -1px 0;
-	padding: 0.667em 1em;
+	padding: 0.667em 0.6em;
 	z-index: 100;
-	border: 1px solid $color-blue-80;
+	border: 1px solid #d8d8d0;
 	font-size: 0.75em;
 	line-height: 1.5em;
 	text-align: center;
 	text-decoration: none;
-	color: $color-blue-60;
+	color: #555;
 	transition: all ease 0.3s;
-	border-radius: 2em;
+	border-radius: 6px;
 }
 .pagination .pagination-prev {
 	float: right;
@@ -1606,8 +1614,9 @@ img[src$="#full"] {
 }
 .pagination a:hover,
 .pagination a:focus {
-	color: $primary-color;
-	border-color: $primary-color;
+	color: #fff;
+	background: #333;
+	border-color: #333;
 }
 .pagination .pagination-label {
 	position: relative;

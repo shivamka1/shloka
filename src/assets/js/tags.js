@@ -25,7 +25,7 @@ if($canvas){
             fontWeight: 'bold',
             fontFamily: 'Cardo',
             rotateRatio: 0,
-            color: '#cdd2d6',
+            color: '#a0a8b0',
             click: function(item) {
                 window.location.href = "./../tag/" + name_slug_map[item[0]];
             },
