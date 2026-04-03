@@ -11,7 +11,7 @@
 	<div class="inner" style="position: relative;">
 		<nav id="navigation">
 		</nav>
-		<a href="/" class="post-go-back">Go Back</a>
+		<a href="javascript:history.back()" class="post-go-back">Go Back</a>
 		<h1 class="post-title">{{{title}}}</h1>
 		<span class="post-meta"><!--{{authors separator=", "}} | --><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM DD, YYYY"}}</time> . {{reading_time}}</span>
 		{{#if feature_image}}<div class="post-cover cover" style="background-image: url('{{feature_image}}');"></div>{{/if}}
