@@ -619,8 +619,11 @@ img[src$="#full"] {
 	text-align: center;
 	font-family: monospace;
 	white-space: nowrap;
-	padding: 0.8em 0 1.2em;
+	padding: 0.4em 0;
 	margin-bottom: 0.4em;
+}
+.home-main .post-count {
+	padding: 0.8em 0 1.2em;
 	position: relative;
 	&:after {
 		content: '';
@@ -1186,6 +1189,24 @@ img[src$="#full"] {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 	transition: border-color 0.2s ease;
 	&:hover, &:active { border-color: $color-blue-80; color: #666 !important; }
+}
+.tag-go-back-wrapper {
+	height: 0;
+	position: relative;
+	max-width: 35em;
+	margin: 0 auto;
+	padding: 0 2em;
+	box-sizing: border-box;
+	.post-go-back {
+		position: absolute;
+		top: -2.5em;
+		left: 0;
+	}
+}
+@media only screen and (max-width: 960px) {
+	.tag-go-back-wrapper .post-go-back {
+		left: 2em;
+	}
 }
 .post-home-icon {
 	width: 36px !important;
