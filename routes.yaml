@@ -1,0 +1,15 @@
+routes:
+  /tag/:
+    template: tag
+  /tags/:
+    template: tags
+
+collections:
+  /:
+    permalink: /{year}/{month}/{day}/{slug}/ 
+    template:
+      - index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

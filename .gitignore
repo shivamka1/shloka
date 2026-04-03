@@ -1,0 +1,6 @@
+.DS_store
+stage/
+dist/
+node_modules
+package-lock.json
+*.zip

@@ -1,0 +1,61 @@
+{
+  "name": "shloka",
+  "description": "A Ghost theme based on Attila by zutrinken",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "src/screenshot-desktop.jpg",
+    "mobile": "src/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "Shivam Kapoor",
+    "email": "namaste@shivamkapoor.com",
+    "url": "https://shivamkapoor.com"
+  },
+  "contributors": [
+    {
+      "name": "Peter Amende",
+      "email": "xoxo@zutrinken.com",
+      "url": "http://zutrinken.com",
+      "note": "Original Attila theme author"
+    }
+  ],
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Personal Blogs"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivamka1/shloka.git"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "grunt": "^1.6.1",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-zip": "^1.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "sass": "^1.69.7"
+  },
+  "config": {
+    "posts_per_page": 5
+  },
+  "dependencies": {
+    "wordcloud": "^1.1.0"
+  }
+}

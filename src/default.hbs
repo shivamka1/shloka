@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>{{meta_title}}</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Host+Grotesk:wght@400;700&family=Bai+Jamjuree:wght@400;500&family=Fira+Sans:wght@400;500&display=swap" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github.min.css" crossorigin="anonymous" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous">
+
+	{{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+
+	{{navigation}}
+
+	<section id="wrapper">
+		<a class="hidden-close"></a>
+		{{{body}}}
+		<div id="body-class" style="display: none;" class="{{body_class}}"></div>
+
+		<footer id="footer">
+			<div class="inner">
+				<section class="credits">
+					<span class="credits-theme">{{t "Theme" }} <a href="https://github.com/shivamka1/shloka">Shloka</a> {{t "by"}} <a href="https://shivamkapoor.com" rel="nofollow">Shivam Kapoor</a></span>
+					<span class="credits-software">{{t "Published with"}} <a href="http://ghost.org">Ghost</a></span>
+				</section>
+			</div>
+		</footer>
+	</section>
+
+	<script type="text/javascript" src="{{asset "js/vendor.js"}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/scala.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="{{asset "js/script.js"}}"></script>
+
+	{{ghost_foot}}
+
+</body>
+</html>

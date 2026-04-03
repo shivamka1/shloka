@@ -1,0 +1,59 @@
+{{!< default}}
+<div class="home-wrapper">
+
+	<aside class="home-sidebar">
+		{{#get "authors" limit="1" order="id asc"}}
+			{{#foreach authors}}
+				{{#if profile_image}}
+					<img src="{{profile_image}}" alt="{{name}}" class="author-avatar" />
+				{{else}}
+					<div class="author-avatar author-avatar-placeholder">{{name}}</div>
+				{{/if}}
+				<div class="blog-header-social">
+					<a href="https://shivamkapoor.com/about/"><img src="{{asset "assets/svg/circle-user-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="About" /></a>
+					<a href="https://github.com/shivamka1" target="_blank"><img src="{{asset "assets/svg/github-brands-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="GitHub" /></a>
+					<a href="http://www.shivamkapoor.com/rss" target="_blank"><img src="{{asset "assets/svg/square-rss-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="RSS" /></a>
+					<a href="/bookshelf/"><img src="{{asset "assets/svg/readme-brands-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="Bookshelf" /></a>
+				</div>
+					{{#if location}}
+						<div class="sidebar-location"><i class="fa-solid fa-location-dot"></i> {{location}}</div>
+					{{/if}}
+				{{/foreach}}
+			{{/get}}
+	</aside>
+
+	<div class="home-main">
+
+		{{#get "posts" limit='all'}}
+			<header id="blog-header" {{#if @site.cover_image}} class="has-cover"{{/if}} data-name="{{posts.length}}">
+				<div class="inner">
+					<nav id="navigation">
+					</nav>
+					<h1 class="blog-name">{{@site.title}}</h1>
+					<span class="blog-description">{{@site.description}}</span>
+				</div>
+				<div class="post-count">Posts: <span class="post-count-number">{{posts.length}}</span></div>
+			</header>
+		{{/get}}
+
+		<div class="tags-container">
+			{{#get "tags" limit='all' include='count.posts' order='count.posts desc'}}
+				<span class="" style="font-family: monospace;">Tags:&nbsp;</span>
+				<div class="tags-wrapper">
+					{{#foreach tags limit="2"}}
+						<a href="{{url}}" class="post-meta">{{name}},</a>
+					{{/foreach}}
+					<a class="post-meta" href="/tags/">et al.</a>
+				</div>
+			{{/get}}
+		</div>
+
+		<div id="index" class="container">
+			<main class="content" role="main">
+				{{> "loop"}}
+			</main>
+		</div>
+
+	</div>
+
+</div>
