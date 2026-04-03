@@ -129,7 +129,8 @@ module.exports = function (grunt) {
             js: {
                 files: {
                     './stage/shloka/assets/<%=  config.jsTargetDir %>/vendor.js': ['<%=  config.jsSrcDir %>/libs/jquery-*.js', '<%=  config.jsSrcDir %>/libs/wordcloud2.js'],
-                    './stage/shloka/assets/<%=  config.jsTargetDir %>/script.js': ['<%=  config.jsSrcDir %>/**/*.js', '!<%=  config.jsSrcDir %>/libs/highlight.pack.js'],
+                    './stage/shloka/assets/<%=  config.jsTargetDir %>/script.js': ['<%=  config.jsSrcDir %>/**/*.js', '!<%=  config.jsSrcDir %>/libs/highlight.pack.js', '!<%=  config.jsSrcDir %>/bookshelf.js'],
+                    './stage/shloka/assets/<%=  config.jsTargetDir %>/bookshelf.js': ['<%=  config.jsSrcDir %>/bookshelf.js'],
                 }
             }
         },
