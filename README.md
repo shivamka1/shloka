@@ -95,3 +95,88 @@ If `cover` is omitted, the bookshelf will try to fetch a cover from the Google B
 2. Update the JSON array in the HTML block
 3. Optionally copy a new cover image to `/var/www/blog/content/images/books/` on the server
 4. Save and publish — changes are live immediately, no theme redeploy needed
+
+---
+
+### About Me (`/about/`)
+
+The about page is driven by the theme template (`page-about.hbs`) and a separate data page in Ghost. You need two Ghost pages:
+
+#### 1. `about` page (the visible page)
+
+- Go to **Ghost Admin → Pages → New page**
+- Title: `About Me`
+- Slug: `about` (must be exact)
+- Leave the page body **empty**
+- Visibility: Public
+- Publish it
+
+The theme template handles all the HTML and layout automatically.
+
+#### 2. `about-data` page (the data source)
+
+- Go to **Ghost Admin → Pages → New page**
+- Title: `about-data`
+- Slug: `about-data` (must be exact)
+- Visibility: Public
+- Add an **HTML block** with the following content:
+
+```html
+<script type="application/json" id="about-data">
+{
+  "name": "Your Name",
+  "bio": [
+    "Hi, I'm {name}, a paragraph about yourself. Supports [links](https://example.com/) inline.",
+    "A second paragraph if needed."
+  ],
+  "past-experiences": [
+    { "title": "Job Title", "company": "Company Name", "year": 2022, "description": "What you did there." }
+  ],
+  "education": [
+    { "degree": "Degree Name", "institution": "University Name", "year": 2010 }
+  ],
+  "publications": [
+    { "title": "Publication Title", "url": "https://...", "description": "Brief description." }
+  ],
+  "certifications": [
+    { "title": "Certification Title", "issuer": "Issuer Name", "url": "https://..." }
+  ]
+}
+</script>
+```
+
+- Publish it
+
+#### Data format details
+
+**Bio**
+
+The `bio` field is an array of paragraphs. Each paragraph supports:
+- `{name}` — replaced with the value of the `name` field, styled as a muted label
+- `[link text](https://url)` — converted to an anchor tag opening in a new tab
+
+**Sections**
+
+All keys other than `name` and `bio` are treated as sections. The key name is automatically converted to a section heading by splitting on `-` and capitalising each word:
+
+| Key | Rendered heading |
+|-----|-----------------|
+| `past-experiences` | Past Experiences |
+| `education` | Education |
+| `publications` | Publications |
+| `certifications` | Certifications |
+
+You can add, remove, or rename sections freely — the renderer picks them up automatically. The supported item shapes are:
+
+| Section | Fields |
+|---------|--------|
+| `past-experiences` | `title`, `company`, `year`, `description` |
+| `education` | `degree`, `institution`, `year` |
+| `publications` | `title`, `url`, `description` |
+| `certifications` | `title`, `issuer`, `url` |
+
+#### Updating your about page
+
+1. Go to **Ghost Admin → Pages → about-data → Edit**
+2. Update the JSON in the HTML block
+3. Save and publish — changes are live immediately, no theme redeploy needed
