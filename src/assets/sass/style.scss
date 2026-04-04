@@ -1975,12 +1975,15 @@ img[src$="#full"] {
 	.muted-label {
 		font-weight: 400;
 		color: #8a9199;
-		font-family: 'Fira Sans', sans-serif;
+		font-family: 'Armata', sans-serif;
+	}
+	h4 .muted-label {
+		font-size: 0.9em;
 	}
 	.about-name {
 		font-weight: 400;
 		color: #8a9199;
-		font-family: 'Fira Sans', sans-serif;
+		font-family: 'Armata', sans-serif;
 	}
 	h5 {
 		font-size: 0.75em;
@@ -1989,5 +1992,6 @@ img[src$="#full"] {
 		letter-spacing: 0.08em;
 		color: #8a9199;
 		margin: -0.8em 0 1em;
+		font-family: 'Armata', sans-serif;
 	}
 }
